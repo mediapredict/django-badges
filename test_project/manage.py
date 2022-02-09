@@ -2,6 +2,8 @@
 import sys
 import os
 
+import wingdbstub
+
 try:
     import settings # Assumed to be in the same directory.
 except ImportError:
