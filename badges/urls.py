@@ -1,8 +1,8 @@
-from django.conf.urls import url
+from django.urls import re_path
 
 from badges import views
 
 urlpatterns = [
-    url(r'^$', views.overview, name="badges_overview"),
-    url(r'^(?P<slug>[A-Za-z0-9_-]+)/$', views.detail, name="badge_detail"),
+    re_path(r'^$', views.overview, name="badges_overview"),
+    re_path(r'^(?P<slug>[A-Za-z0-9_-]+)/$', views.detail, name="badge_detail"),
 ]
