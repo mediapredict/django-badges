@@ -1,7 +1,6 @@
-
-from datetime import datetime
-
+from django.utils import timezone
 from django.contrib.auth import get_user_model
+
 try:
     from django.urls import reverse
 except ImportError:
@@ -83,7 +82,7 @@ class BadgeToUser(models.Model):
     badge = models.ForeignKey(Badge, on_delete=models.CASCADE)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
 
-    created = models.DateTimeField(default=datetime.now)
+    created = models.DateTimeField(default=timezone.now)
 
 
 from . import listeners

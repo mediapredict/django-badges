@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 
-
 from django.db import models, migrations
-import datetime
 from django.conf import settings
+from django.utils import timezone
 
 
 class Migration(migrations.Migration):
@@ -26,7 +25,7 @@ class Migration(migrations.Migration):
             name='BadgeToUser',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('created', models.DateTimeField(default=datetime.datetime.now)),
+                ('created', models.DateTimeField(default=timezone.now)),
                 ('badge', models.ForeignKey(to='badges.Badge', on_delete=models.CASCADE)),
                 ('user', models.ForeignKey(to=settings.AUTH_USER_MODEL, on_delete=models.CASCADE)),
             ],
