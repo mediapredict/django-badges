@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "django-badges"
-version = "1.1.7"
+version = "1.1.8"
 authors = [
     {name = "James Robert"},
     {email = "jiaaro@gmail.com"}
@@ -13,8 +13,8 @@ description = "Stack Overflow style badges for django"
 license = {text = "GPLv3"}
 keywords = ["django", "badges", "social"]
 urls = {homepage = "http://djangobadges.com"}
-requires-python = ">=3.11"
-dependencies = ["django>=4.2.6", "Pillow>=10.0.1"]
+requires-python = ">=3.12"
+dependencies = ["django>=5.0.6", "Pillow>=10.3.0"]
 readme = "README.md"
 classifiers = [
     "Development Status :: 5 - Production/Stable",
